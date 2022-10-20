@@ -1,18 +1,18 @@
-let colors = [0, 1, 2, 3 , 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
+let randomColors = [0, 1, 2, 3 , 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
 
 let btn = document.getElementById('btn');
-let color = document.querySelector('.hash');
+let color = document.querySelector('.color');
 
 btn.addEventListener('click', () => {
-    let hexColor = '#'
+    let colorInit = '#'
     
     for (let i = 0; i<6; i++){
-        hexColor += colors[getRandom()]
+        colorInit += randomColors[getRandom()]
     }
-    document.body.style.backgroundColor = hexColor
-    color.textContent = hexColor
+    document.body.style.backgroundColor = colorInit
+    color.textContent = colorInit
 })
 
-function getRandom(){
-    return Math.floor(Math.random() * colors.length)
+const getRandom = () => {
+    return Math.floor(Math.random() * randomColors.length)
 }
